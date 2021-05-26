@@ -1,0 +1,28 @@
+input UsuarioInput {
+  _id: Int
+  nome: String
+  email: String
+  senha: String
+}
+
+input FiltroUsuario {
+  _id: Int
+  email: String
+}
+
+type Usuario {
+  _id: Int
+  nome: String
+  email: String
+  senha: String
+}
+
+type Query {
+  usuario(filtro: FiltroUsuario): Usuario
+}
+
+type Mutation {
+  criarUsuario(dados: UsuarioInput): Usuario
+  deletarUsuario(filtro: FiltroUsuario): Boolean
+  atualizarUsuario(filtro: FiltroUsuario): Usuario
+}
