@@ -4,7 +4,7 @@ const resolvers = require('./graphql/index')
 const mongoose = require('mongoose');
 const port = 3000;
 
-mongoose.connect('mongodb+srv://gusta:135792@cursojs.vtjjl.mongodb.net/Loading?retryWrites=true&w=majority',
+mongoose.connect('stringconecção',
 	{
 		poolSize: 5,
 		useNewUrlParser: true,
